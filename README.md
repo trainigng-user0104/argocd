@@ -4,6 +4,8 @@ oc new-project argocd
 
 -> install Community Operator there
 
+-> create ArgoCD instance with defaults ("example-argocd")
+
 oc adm policy add-cluster-role-to-user cluster-admin -z example-argocd-argocd-application-controller -n argocd
 
 oc get crd | grep argo
