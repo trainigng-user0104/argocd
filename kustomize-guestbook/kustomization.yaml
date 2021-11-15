@@ -1,6 +1,7 @@
 namePrefix: kustomize-
 
 resources:
+- anyuid-binding.yaml  
 - guestbook-ui-deployment.yaml
 - guestbook-ui-svc.yaml
 - guestbook-ui-route.yaml
