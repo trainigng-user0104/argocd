@@ -11,16 +11,14 @@ Create ArgoCD instance with defaults ("example-argocd"):
 ```oc adm policy add-cluster-role-to-user cluster-admin -z example-argocd-argocd-application-controller -n argocd```
 
 Check if custom resources are available:
+
 ```oc get crd | grep argo```
 
+For "admin" password see secret/example-argocd-cluster
 
-git clone https://github.com/argoproj-labs/argocd-operator.git
+Optional:
 
-oc apply -f argocd-operator/examples/argocd-route.yaml
-
-for "admin" password see secret/example-argocd-cluster
-
-git clone https://github.com/guhilling/argocd-example-apps.git
+```git clone https://github.com/guhilling/argocd-example-apps.git```
 
 install guestbook-kustomize
 
