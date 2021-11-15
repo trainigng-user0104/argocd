@@ -1,12 +1,16 @@
 # Setting up ArgoCD with the Community Operator
 
 oc new-project argocd
+
 -> install Community Operator there
+
 oc adm policy add-cluster-role-to-user cluster-admin -z example-argocd-argocd-application-controller -n argocd
+
 oc get crd | grep argo
 
 
 git clone https://github.com/argoproj-labs/argocd-operator.git
+
 oc apply -f argocd-operator/examples/argocd-route.yaml
 
 for "admin" password see secret/example-argocd-cluster
