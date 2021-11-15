@@ -7,4 +7,4 @@ spec:
     targetPort: 80
   to:
     kind: Service
-    name: helm-guestbook
+    name: guestbook-helm-guestbook
