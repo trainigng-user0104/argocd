@@ -1,14 +1,17 @@
 # Setting up ArgoCD with the Community Operator
 
-oc new-project argocd
+```oc new-project argocd```
 
--> install Community Operator there
+Install Community Operator in that project
 
--> create ArgoCD instance with defaults ("example-argocd")
+Create ArgoCD instance with defaults ("example-argocd"):
 
-oc adm policy add-cluster-role-to-user cluster-admin -z example-argocd-argocd-application-controller -n argocd
+```oc apply -f argocd-instance.yaml -n argocd```
 
-oc get crd | grep argo
+```oc adm policy add-cluster-role-to-user cluster-admin -z example-argocd-argocd-application-controller -n argocd```
+
+Check if custom resources are available:
+```oc get crd | grep argo```
 
 
 git clone https://github.com/argoproj-labs/argocd-operator.git
