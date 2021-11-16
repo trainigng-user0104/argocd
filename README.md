@@ -1,4 +1,4 @@
-# Setting up ArgoCD with the Community Operator
+# Setting up ArgoCD with the Community Operator on OpenShift
 
 ```oc new-project argocd```
 
